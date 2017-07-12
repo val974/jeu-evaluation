@@ -17,17 +17,15 @@
      // les noms de jours / mois
      let jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
      let mois = new Array("janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre");
-     // on recupere la date
-     let date = new Date();
-     // on construit le message
+     let date = new Date(); // je recupere la date
      let j = jours[date.getDay()] + " ";   // nom du jour
-     let d = date.getDate() + " ";   // numero du jour*/
+     let d = date.getDate() + " ";   // numero du jour
      let m = mois[date.getMonth()] + " ";   // mois
-     let y = date.getFullYear();
-     let dateentiere=j+d+m+y;
- 	setInterval(function(){ dateentiere; }, 1000);
+     let y = date.getFullYear(); // années
+     let dateentiere=j+d+m+y; //date entière
+ 	setInterval(function(){ dateentiere; }, 1000); //pour actualiser
 
-	document.querySelector('span').innerHTML=dateentiere
+	document.querySelector('span').innerHTML=dateentiere //pour afficher message dans l'HTML
 
 </script>
 </body>

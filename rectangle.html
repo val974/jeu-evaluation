@@ -41,23 +41,23 @@
 	}
 }
 
-function couleur(){
+function couleur(){ //je change la couleur en rouge
 	let canvas = document.querySelector("canvas");
 	rectangle.fillStyle = "red";
 	rectangle.fillRect(50, 40 , 180, h);
 }
 
 function couleurinit(){
-	let canvas = document.querySelector("canvas");
+	let canvas = document.querySelector("canvas"); //la couleur revient à la couleur d'origine
 	rectangle.fillStyle = "black";
 	rectangle.fillRect(50, 40 , 180, h);
 }
 
-function transparence(){
+function transparence(){ //je nettoie mon canvas pour effacer le rectangle
 	rectangle.clearRect(0, 0, 300, 300);
 }
 
-function apparaitre(){
+function apparaitre(){ //je remets les paramètres précédents pour afficher le rectangle
 	let canvas = document.querySelector("canvas");
 	rectangle.fillStyle = "black";
 	rectangle.fillRect(50, 40 , 180, h);
