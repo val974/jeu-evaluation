@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GALERIE</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+	<img src="https://data2.origin.com/content/dam/originx/web/app/games/tomb-raider/tomb-raider/tomb-raider-standard-edition_pdp_3840x2160_en_WW.jpg" height="100px">
+
+	<style type="text/css">
+
+		img {
+			margin-left: 50px;
+			margin-top: 50px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function() {	
+			let taille = $("img").height();	
+
+			$('img').on('click', function(){
+				var image = $('img').attr('src'); //rentre le contenu de l'attribut src dans une variable
+				$('img').height('200px')
+
+			});
+		});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RECTANGLE</title>
+</head>
+<body>
+	<canvas width="300px" height="300px">
+		<p>Désolé, votre navigateur ne supporte pas le canvas.</p>
+	</canvas>
+
+	<button onclick="hauteur()">Bouton 1</button>
+	<button onclick="couleur()">Bouton 2</button>
+	<button onclick="couleurinit()">Bouton 3</button>
+	<button onclick="transparence()">Bouton 4</button>
+	<button onclick="apparaitre()">Bouton 5</button>
+
+	<style type="text/css">
+		canvas {
+			background-color: pink;
+		}
+
+	</style>
+	<script type="text/javascript">
+		let canvas = document.querySelector("canvas");
+	 // on précise que le canvas est en 2D
+	 let rectangle = canvas.getContext('2d');
+	 rectangle.fillStyle = "black"; //couleur du rectangle
+	 let hrect = 80;//hauteur du rectangle
+	 let h = hrect; //hauteur du rectangle non défini
+	 let hcanvas = 300; //hauteur canvas
+	 rectangle.fillRect(50, 40 , 180, hrect);
+	 
+
+	 function hauteur(){
+	 	let canvas = document.querySelector("canvas");
+	 // on précise que le canvas est en 2D
+	 let rectangle = canvas.getContext('2d');	 
+	 rectangle.fillRect(50, 40 , 180, h); //je dessine mon rectangle
+		if (h<hcanvas) { //tant que la hauteur du rectangle n'est pas égale à la hauteur du canvas, j'ajoute 10.
+			h+=10
+	}
+}
+
+function couleur(){
+	let canvas = document.querySelector("canvas");
+	rectangle.fillStyle = "red";
+	rectangle.fillRect(50, 40 , 180, h);
+}
+
+function couleurinit(){
+	let canvas = document.querySelector("canvas");
+	rectangle.fillStyle = "black";
+	rectangle.fillRect(50, 40 , 180, h);
+}
+
+function transparence(){
+	rectangle.clearRect(0, 0, 300, 300);
+}
+
+function apparaitre(){
+	let canvas = document.querySelector("canvas");
+	rectangle.fillStyle = "black";
+	rectangle.fillRect(50, 40 , 180, h);
+}
+
+
+
+</script>
+
+
+
+
+
+</script>
+</body>
+</html>
